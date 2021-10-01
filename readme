@@ -1,4 +1,5 @@
 for it to work on your pc, 
 1.download google tesseract there: https://github.com/UB-Mannheim/tesseract/wiki
-2. install it in pdf_ocr_progs
-3. in pdf_ocr_progs create 2 folders: input_pdfs, output_pdfs
+2.download popler v 0.67 here: https://blog.alivate.com.au/poppler-windows/
+3. install it in pdf_ocr_progs
+4. in pdf_ocr_progs create 2 folders: input_pdfs, output_pdfs
