@@ -1,0 +1,4 @@
+for it to work on your pc, 
+1.download google tesseract there:
+2. install it in pdf_ocr_progs
+3. in pdf_ocr_progs create 2 folders: input_pdfs, output_pdfs
