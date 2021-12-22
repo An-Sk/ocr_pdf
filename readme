@@ -7,10 +7,39 @@
 Скурыгин Андрей биб212 1 курс ИБ
 
 файлы написанные мной:
-
+pdf_ocr/convertor:
+  -views.py
+  -apps.py
+  -pdf_ocr_progs/pdf_text_extractor.py
+  -templates/convertor/convertor.html
+  
 файлы в которых я изменял что-то:
 (выделил часть заимствованного кода двумя решетками (##))
-
-файлы полностью заимствованные:
-
+pdf_ocr/pdf_ocr:
+  -urls.py
+pdf_ocr/convertor:
+  -views.py
+  
+файлы полностью заимствованные или те, которые были созданы с помощью джанго:
+pdf_ocr:
+  -manage.py
+pdf_ocr/convertor:
+  -static/convertor.css
+  -admins.py
+  -models.py
+  -tests.py
+pdf_ocr/pdf_ocr:
+  -asgi.py
+  -settings.py(я буквально только включил app в INSTALLED_APPS и добавил STATIC_URL и MEDIA_ROOT, так что по сути он почти полностью заимствован)
+  -wsgi.py
+  
+  
 функции написанные для проекта:
+pdf_ocr/convertor/views.py:
+  -home
+  -download
+pdf_ocr/convertor/pdf_ocr_progs/pdf_text_extractor.py:
+  -create_folders
+  -convert_to_png
+  -ocr_png_to_pdf_and_merge_pdfs
+  -func
