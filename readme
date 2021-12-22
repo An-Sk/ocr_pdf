@@ -1,12 +1,11 @@
-for it to work on your pc, 
-1.download google tesseract there: https://github.com/UB-Mannheim/tesseract/wiki
-2.download popler v 0.67 here: https://blog.alivate.com.au/poppler-windows/
-3. install it in pdf_ocr_progs
-4. in pdf_ocr_progs create 2 folders: input_pdfs, output_pdfs
+Участник 1:
+Скурыгин Андрей биб212 1 курс ИБ
 
+файлы написанные мной:
 
-then you are good to go, just enter first ocr_pdf folder in cmd, there write: python manage.py runserver
+файлы в которых я изменял что-то:
+(выделил часть заимствованного кода двумя решетками (##))
 
-then you will see that the server is running, so you just have open your browser and enter generated link, usually just local ip or smthh like this
+файлы полностью заимствованные:
 
-and then you can upload file there, wait a bit and get ocred version of it
+функции написанные для проекта:
