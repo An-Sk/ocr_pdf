@@ -1,0 +1,16 @@
+необходимые питоновские библеотеки:
+(Устанавливаются в командной строке через pip install название библеотеки)
+-PyPDF2 
+-pytesseract
+-shutil
+-Django
+
+дополнительные программы для установки и куда их установить:
+1.download google tesseract there: https://github.com/UB-Mannheim/tesseract/wiki
+2.download popler v 0.67 here: https://blog.alivate.com.au/poppler-windows/
+3. установите их в папке: pdf_ocr_progs
+4. в папке pdf_ocr_progs создайте еще 2 папки: input_pdfs, output_pdfs
+
+для запуска сайта необходимо в командной строке находится в верхней папке pdf_ocr:
+- затем пишите команду python manage.py runserver
+- переходите по адресу появившейся в консоле
