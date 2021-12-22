@@ -12,6 +12,23 @@ filename = ''
 i = 0
 # Create your views here.
 def home(request):
+    """Функция с главной страничкой, куда можно загрузить файл, выбрать язык
+    и скачать проокээриный пдф файл
+
+    Parameters
+    ----------
+    request: dict, required
+        содержит сообщение о том, что нужно забрать файл, сам файл, выбранный язык
+    return argument
+    ----------
+    render: func, required, used arguments(request, html_page, context):
+        request: dict, stated
+            содержит всю информацию о типе запроса
+        html_page: file, stated
+            просто штмл страничка
+        context: dict, generated
+            контекст для штмл странички
+    """
     wrfe = 0
     norm = 0
     file = 0
@@ -46,10 +63,25 @@ def home(request):
     return render(request, 'convertor/convertor.html', context)
 
 def download(request):
+    """Функция позволяющая загрузить созданный файл со страницы в браузере
+
+    Parameters
+    ----------
+    request: dict, required
+        содержит сообщение о том, что нужно забрать файл
+
+    return argument
+    ----------
+    response: dict, generated
+        содержит файл
+    """
     filepath = os.path.join(base_dir, 'pdf_ocr_progs', 'output_pdfs', filename)
+    ## часть отсюда https://stackoverflow.com/questions/36392510/django-download-a-file
+    ## еще часть отсюда https://programtalk.com/
     chunk_size = 8192
     response = StreamingHttpResponse(FileWrapper(open(filepath, 'rb'), chunk_size),
                                      content_type=mimetypes.guess_type(filepath)[0])
     response['Content-Length'] = os.path.getsize(filepath)
     response['Content-Disposition'] = 'Attachement;filename=%s' % filename
+    ##
     return response
